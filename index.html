@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Dussehra, Mam!</title>
+    <title>Happy Dussehra</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #f5b041 0%, #f7dc6f 100%);
+            background: linear-gradient(135deg, #ffebc4, #fcd09f);
             margin: 0;
             padding: 0;
             display: flex;
@@ -19,17 +19,17 @@
         }
 
         .card {
-            background: linear-gradient(135deg, #ffbb33, #ff7733);
+            background: linear-gradient(135deg, #f39c12, #e74c3c);
             border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            padding: 40px;
             text-align: center;
             color: white;
             position: relative;
             z-index: 1;
             width: 100%;
-            max-width: 400px;
-            border: 2px solid #fff;
+            max-width: 500px;
+            border: 3px solid #fff;
             animation: float 3s ease-in-out infinite;
         }
 
@@ -43,13 +43,14 @@
         }
 
         .card h1 {
-            font-size: 6vw;
+            font-size: 5vw;
             margin: 0;
-            font-family: 'Brush Script MT', cursive;
-            color: #ffed66;
-            background: linear-gradient(to right, #f39c12, #f7dc6f);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-family: 'Pacifico', cursive;
+            color: white;
+            background: linear-gradient(to right, #f39c12, #d35400);
+            padding: 10px 0;
+            border-radius: 15px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
             animation: bounceText 2s ease-in-out infinite;
         }
 
@@ -58,67 +59,66 @@
                 transform: scale(1);
             }
             50% {
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
         }
 
         .card p {
-            font-size: 4vw;
+            font-size: 1.2rem;
             margin: 20px 0;
-            color: #f39c12;
-            background-color: #1e272e;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.15);
             padding: 10px;
-            border-radius: 10px;
-            font-family: 'Comic Sans MS', cursive;
+            border-radius: 12px;
         }
 
         .shayari {
-            font-size: 3.5vw;
-            color: #fff;
+            font-size: 1.1rem;
+            color: #ffedd8;
             margin-top: 20px;
             font-style: italic;
             font-family: 'Garamond', serif;
-            background-color: #f8c471;
-            padding: 10px;
-            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 12px;
             animation: glow 2s ease-in-out infinite alternate;
         }
 
         @keyframes glow {
             from {
-                text-shadow: 0 0 5px #fff, 0 0 10px #ffd700, 0 0 15px #f39c12, 0 0 20px #ff0000;
+                text-shadow: 0 0 5px #fff, 0 0 10px #ffe57f, 0 0 15px #fab1a0, 0 0 20px #e17055;
             }
             to {
-                text-shadow: 0 0 10px #fff, 0 0 20px #ffd700, 0 0 30px #f39c12, 0 0 40px #ff0000;
+                text-shadow: 0 0 10px #fff, 0 0 20px #ffe57f, 0 0 30px #fab1a0, 0 0 40px #e17055;
             }
         }
 
         .images {
             margin: 20px 0;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            gap: 15px;
         }
 
         .images img {
-            width: 20vw;
+            width: 100px;
             height: auto;
             border-radius: 10px;
-            animation: rotateImage 3s infinite ease-in-out;
+            animation: pulse 4s infinite ease-in-out;
         }
 
-        @keyframes rotateImage {
+        @keyframes pulse {
             0% {
-                transform: rotate(0deg);
+                transform: scale(1);
             }
             50% {
-                transform: rotate(15deg);
+                transform: scale(1.1);
             }
             100% {
-                transform: rotate(0deg);
+                transform: scale(1);
             }
         }
 
-        /* Balloons */
         .balloons {
             position: absolute;
             bottom: 0;
@@ -130,8 +130,8 @@
         .balloon {
             position: absolute;
             bottom: -150px;
-            width: 50px;
-            height: 80px;
+            width: 40px;
+            height: 60px;
             background-color: rgba(255, 0, 100, 0.8);
             border-radius: 50%;
             animation: rise 6s infinite ease-in-out;
@@ -157,30 +157,30 @@
         }
 
         .balloon:nth-child(1) {
-            left: 20%;
-            background-color: #ff69b4;
+            left: 10%;
+            background-color: #ff6b81;
             animation-delay: 0s;
         }
 
         .balloon:nth-child(2) {
-            left: 40%;
-            background-color: #ff1493;
+            left: 35%;
+            background-color: #74b9ff;
             animation-delay: 2s;
         }
 
         .balloon:nth-child(3) {
             left: 60%;
-            background-color: #ff4500;
+            background-color: #81ecec;
             animation-delay: 4s;
         }
 
         .balloon:nth-child(4) {
-            left: 80%;
-            background-color: #ff7f50;
+            left: 85%;
+            background-color: #fd79a8;
             animation-delay: 6s;
         }
 
-        /* Twinkling Stars */
+        /* Stars */
         .stars {
             position: absolute;
             top: 0;
@@ -194,7 +194,7 @@
             position: absolute;
             width: 3px;
             height: 3px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 50%;
             animation: twinkle 2s infinite ease-in-out;
         }
@@ -210,7 +210,7 @@
 
         .star:nth-child(1) {
             top: 20%;
-            left: 25%;
+            left: 20%;
             animation-delay: 1s;
         }
 
@@ -222,30 +222,8 @@
 
         .star:nth-child(3) {
             top: 60%;
-            left: 75%;
+            left: 70%;
             animation-delay: 3s;
-        }
-
-        .star:nth-child(4) {
-            top: 80%;
-            left: 35%;
-            animation-delay: 4s;
-        }
-
-        /* Emojis representing Mam */
-        .mam-emoji {
-            font-size: 15vw;
-            animation: fadeIn 2s infinite alternate;
-            margin-top: 20px;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0.5;
-            }
-            to {
-                opacity: 1;
-            }
         }
 
         /* Responsive Design */
@@ -260,15 +238,11 @@
             }
 
             .card p, .shayari {
-                font-size: 5vw;
+                font-size: 4vw;
             }
 
             .images img {
-                width: 30vw;
-            }
-
-            .mam-emoji {
-                font-size: 20vw;
+                width: 70px;
             }
         }
     </style>
@@ -276,17 +250,15 @@
 <body>
 
 <div class="card">
-    <h1>Happy Dussehra, Mam!</h1>
-    <p>Wishing you triumph over all obstacles and a life filled with happiness and success!</p>
+    <h1>Happy Dussehra!</h1>
+    <p>Wishing you joy, strength, and success in every battle of life!</p>
     <div class="shayari">
-        <p>असत्य पर सत्य की विजय,<br> बुराई पर अच्छाई की जीत,<br> यही है दशहरा का संदेश,<br> आपको मिले हर सफलता की रीत।</p>
-        <p>आपकी ज़िंदगी में हो हर दिन नया उजाला,<br> जैसे राम ने रावण पर किया था विजय का धमाका।</p>
+        <p>सत्य की होती हमेशा जीत,<br> यही है दशहरे का संदेश।<br> बुराई पर अच्छाई की जीत,<br> जीवन में मिलती सफलता विशेष।</p>
     </div>
     <div class="images">
-        <img src="https://example.com/lord-rama.png" alt="Lord Rama">
-        <img src="https://example.com/ravana.png" alt="Ravana Effigy">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Rama_in_Hinduism.svg/800px-Rama_in_Hinduism.svg.png" alt="Lord Rama">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Ravana.jpg/800px-Ravana.jpg" alt="Ravana Effigy">
     </div>
-    <div class="mam-emoji">😊</div>
 </div>
 
 <div class="balloons">
@@ -297,7 +269,6 @@
 </div>
 
 <div class="stars">
-    <div class="star"></div>
     <div class="star"></div>
     <div class="star"></div>
     <div class="star"></div>
