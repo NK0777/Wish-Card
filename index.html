@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday, Mam!</title>
+    <title>Happy Dussehra, Mam!</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            background: linear-gradient(135deg, #f5b041 0%, #f7dc6f 100%);
             margin: 0;
             padding: 0;
             display: flex;
@@ -19,7 +19,7 @@
         }
 
         .card {
-            background: linear-gradient(135deg, #ff7eb9, #ff65a3);
+            background: linear-gradient(135deg, #ffbb33, #ff7733);
             border-radius: 20px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             padding: 30px;
@@ -27,6 +27,7 @@
             color: white;
             position: relative;
             z-index: 1;
+            width: 100%;
             max-width: 400px;
             border: 2px solid #fff;
             animation: float 3s ease-in-out infinite;
@@ -42,11 +43,11 @@
         }
 
         .card h1 {
-            font-size: 48px;
+            font-size: 6vw;
             margin: 0;
             font-family: 'Brush Script MT', cursive;
             color: #ffed66;
-            background: linear-gradient(to right, #ff6b6b, #ffcc00);
+            background: linear-gradient(to right, #f39c12, #f7dc6f);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: bounceText 2s ease-in-out infinite;
@@ -62,9 +63,9 @@
         }
 
         .card p {
-            font-size: 20px;
+            font-size: 4vw;
             margin: 20px 0;
-            color: #ffdd59;
+            color: #f39c12;
             background-color: #1e272e;
             padding: 10px;
             border-radius: 10px;
@@ -72,12 +73,12 @@
         }
 
         .shayari {
-            font-size: 18px;
+            font-size: 3.5vw;
             color: #fff;
             margin-top: 20px;
             font-style: italic;
             font-family: 'Garamond', serif;
-            background-color: #ff6348;
+            background-color: #f8c471;
             padding: 10px;
             border-radius: 10px;
             animation: glow 2s ease-in-out infinite alternate;
@@ -85,77 +86,36 @@
 
         @keyframes glow {
             from {
-                text-shadow: 0 0 5px #fff, 0 0 10px #ff9b9b, 0 0 15px #ff3b3b, 0 0 20px #ff0000;
+                text-shadow: 0 0 5px #fff, 0 0 10px #ffd700, 0 0 15px #f39c12, 0 0 20px #ff0000;
             }
             to {
-                text-shadow: 0 0 10px #fff, 0 0 20px #ff9b9b, 0 0 30px #ff3b3b, 0 0 40px #ff0000;
+                text-shadow: 0 0 10px #fff, 0 0 20px #ffd700, 0 0 30px #f39c12, 0 0 40px #ff0000;
             }
         }
 
-        .hearts {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            overflow: hidden;
+        .images {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-around;
         }
 
-        .heart {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            transform: rotate(45deg);
-            animation: floatHeart 7s infinite ease-in-out;
-            border-radius: 50%;
-            top: 100%;
+        .images img {
+            width: 20vw;
+            height: auto;
+            border-radius: 10px;
+            animation: rotateImage 3s infinite ease-in-out;
         }
 
-        .heart::before, .heart::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-        }
-
-        .heart::before {
-            top: -50%;
-            left: 0;
-        }
-
-        .heart::after {
-            left: -50%;
-            top: 0;
-        }
-
-        @keyframes floatHeart {
+        @keyframes rotateImage {
             0% {
-                transform: translateY(0) rotate(45deg);
-                opacity: 1;
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(15deg);
             }
             100% {
-                transform: translateY(-100vh) rotate(45deg);
-                opacity: 0;
+                transform: rotate(0deg);
             }
-        }
-
-        .heart:nth-child(2) {
-            left: 25%;
-            animation-delay: 2s;
-        }
-
-        .heart:nth-child(3) {
-            left: 50%;
-            animation-delay: 3s;
-        }
-
-        .heart:nth-child(4) {
-            left: 75%;
-            animation-delay: 4s;
         }
 
         /* Balloons */
@@ -274,7 +234,7 @@
 
         /* Emojis representing Mam */
         .mam-emoji {
-            font-size: 100px;
+            font-size: 15vw;
             animation: fadeIn 2s infinite alternate;
             margin-top: 20px;
         }
@@ -287,25 +247,46 @@
                 opacity: 1;
             }
         }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .card {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            .card h1 {
+                font-size: 8vw;
+            }
+
+            .card p, .shayari {
+                font-size: 5vw;
+            }
+
+            .images img {
+                width: 30vw;
+            }
+
+            .mam-emoji {
+                font-size: 20vw;
+            }
+        }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <h1>Happy Birthday, Mam!</h1>
-    <p>Wishing you a day filled with joy, laughter, and all your heart's desires!</p>
+    <h1>Happy Dussehra, Mam!</h1>
+    <p>Wishing you triumph over all obstacles and a life filled with happiness and success!</p>
     <div class="shayari">
-        <p>खुशियों से भरी हो आपकी ज़िंदगी,<br> हर लम्हा हो हंसी से रोशन।<br> हर दिन लगे एक नया सपना,<br> जन्मदिन की ढेर सारी शुभकामनाएं, मम! 💖</p>
-        <p>सितारों से सजाएँ ये रातें,<br> फूलों से महके हर बात,<br> ऐसे ही गुजरे आपकी ज़िंदगी,<br> जैसे हर दिन हो जश्न की रात।</p>
+        <p>असत्य पर सत्य की विजय,<br> बुराई पर अच्छाई की जीत,<br> यही है दशहरा का संदेश,<br> आपको मिले हर सफलता की रीत।</p>
+        <p>आपकी ज़िंदगी में हो हर दिन नया उजाला,<br> जैसे राम ने रावण पर किया था विजय का धमाका।</p>
     </div>
-    <div class="mam-emoji">👩‍🏫💐</div>
-</div>
-
-<div class="hearts">
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
+    <div class="images">
+        <img src="https://example.com/lord-rama.png" alt="Lord Rama">
+        <img src="https://example.com/ravana.png" alt="Ravana Effigy">
+    </div>
+    <div class="mam-emoji">😊</div>
 </div>
 
 <div class="balloons">
